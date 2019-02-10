@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Searchbar from './searchBar.js';
-import CategoryWidget from './categoryWidget.js';
 
 
-import './Css/MuseumsPage.css';
+
+import '../Css/MuseumsPage.css';
 
 
 class MuseusmsContent extends Component {
@@ -19,18 +19,14 @@ class MuseusmsContent extends Component {
         return (
 
         <div className="pageContent">
-            <h1>{this.state.header}</h1>
 
-              <div class="row">
+            <h1 id="headerMuseum">{this.state.header}</h1>
 
-                <div class="columnRight">
-
+            
                   <Searchbar/>
-                  <CategoryWidget/>
-
-
-               </div>
-             </div>
+                  
+          
+       
         </div>
 
         );
