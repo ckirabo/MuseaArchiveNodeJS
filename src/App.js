@@ -3,18 +3,10 @@ import NavBar from './navbar.js';
 
 class App extends Component {
 
-    constructor() {
-        super();
-        this.state = {
-
-        }
-    }
-
 
   render() {
     return (
      
-
         <div>
         <NavBar/>
         </div>

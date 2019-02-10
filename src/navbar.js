@@ -6,8 +6,8 @@ import {
     Link
 } from 'react-router-dom'
 
-import HomePageContent from './HomePageContent.js';
-import MuseusmsContent from './MuseumPageContent.js';
+import HomePageContent from './HomeJs/HomePageContent.js';
+import MuseusmsContent from './MuseumsJs/museumPageContent.js';
 
 
 class NavBar extends Component {

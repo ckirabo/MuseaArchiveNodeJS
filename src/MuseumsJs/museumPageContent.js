@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Searchbar from './searchBar.js';
-import CategoryWidget from './categoryWidget.js';
+import CategoryWidget from '../categoryWidget.js';
 
 
-import './Css/MuseumsPage.css';
+import '../Css/MuseumsPage.css';
 
 
 class MuseusmsContent extends Component {
@@ -23,13 +23,8 @@ class MuseusmsContent extends Component {
 
               <div class="row">
 
-                <div class="columnRight">
-
                   <Searchbar/>
-                  <CategoryWidget/>
-
-
-               </div>
+            
              </div>
         </div>
 

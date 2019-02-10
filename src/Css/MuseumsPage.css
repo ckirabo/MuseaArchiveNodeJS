@@ -12,13 +12,13 @@ a:hover {
 /*For the columns .... Need to make them start at the same level*/
 
 div.columnLeft {
-	padding: 5px;
+	padding: 10px;
 	width:65%;
 	float: left;
 }
 
 div.columnRight {
-	padding: 5px;
+	padding: 10px;
 	width: 35%;
 	float: right;
 }
@@ -34,7 +34,7 @@ div.pageContent {
 div.searchWidget {
 	width: 250px;
 	background-color: #f1f1f1;
-	margin: 10px;
+	margin: 15px;
 	padding: 15px;
 	border: 3px solid #595959;
 	border-radius: 4px;
@@ -51,11 +51,18 @@ input[type=text]:focus {
 input[type=button]:focus {
 	background-color: #66cc99;
 	border-radius: 8px;
+
 }
+
+#searchBoxId{
+	width: 150px;
+}
+
 
 #searchGo {
 	border-radius: 8px;
 	font-size: 18px;
+	margin-left: 40px;
 }
 
 #searchGo input:focus {
@@ -83,6 +90,18 @@ ul.categoryList {
 
 
 
+div.locationForCards{
+padding: 15px;
+
+}
+
+div.cards{
+	border: 1px solid #595959;
+	padding: 5px;
+	border-radius: 4px;
+	margin: 5px;
+}
+
 /* On screens that are less than 1300px wide, make the SIDE CHANGE VIEW */
 @media screen and (max-width:1300px) {
 
@@ -101,8 +120,6 @@ ul.categoryList {
 
 }
 
-
-
 /* On screens that are less than 700px wide, make the SIDE CHANGE VIEW */
 @media screen and (max-width:700px) {
 
@@ -111,10 +128,11 @@ ul.categoryList {
 	}
 
 	div.searchWidget {
-		width: 80%;
+		width: 50%;
 		height: auto;
 		position: relative;
 	}
+
 
 	div.searchWidget a {
 		float: left;
@@ -136,8 +154,7 @@ ul.categoryList {
 /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
 @media screen and (max-width:400px) {
 	div.searchWidget a {
-		text-align: center;
-		float: none;
+		float: none;	
 	}
 
 }
