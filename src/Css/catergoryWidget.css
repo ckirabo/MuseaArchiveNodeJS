@@ -1,0 +1,72 @@
+/*CSS FOR THE CATEGORY WIDGET*/
+
+ul {
+	list-style: none;
+}
+
+
+
+
+div.columnRight {
+	padding: 10px;
+	width: 35%;
+	float: right;
+}
+
+
+
+div.categoryWidget {
+	text-align: center;
+	width: 200px;
+	margin: 45px;
+	border: 3px solid #595959;
+	border-radius: 4px;
+	-webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+	-moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+}
+
+div.categoryTitle {
+	background-color: #f1f1f1;
+	padding: 3px;
+}
+
+ul.categoryList {
+	padding: 5px;
+}
+
+
+/* On screens that are less than 950px wide, make the SIDE CHANGE VIEW */
+@media screen and (max-width:950px) {
+
+	h1 {
+		text-align: center;
+	}
+	
+     div.columnRight{
+	  width:100%;
+	}
+
+	div.categoryWidget {
+		display: none;
+	}
+
+
+}
+
+
+/* On screens that are less than 700px wide, make the SIDE CHANGE VIEW */
+@media screen and (max-width:800px) {
+
+	h1 {
+		text-align: center;
+	}
+
+
+/*Change the categories tab to a side nav button!!! that displays options in on overlay*/
+	div.categoryWidget {
+		display: none;
+	}
+
+	div.columnLeft {margin-left: 0;}
+	}
+

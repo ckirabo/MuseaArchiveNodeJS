@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CreateCard from './createCard.js';
+import CategoryWidget from './categoryWidget.js';
 
 import '../Css/MuseumsPage.css';
 
@@ -41,12 +42,14 @@ class Searchbar extends Component {
 		<div>
 
            <div className="columnRight">		
-	       <div className="searchWidget">
+	         <div className="searchWidget">
            <input type="text" placeholder="Search.." id="searchBoxId" onChange={this.filterMuseumsByName}/>
            <input type="button" value="Go!" id="searchGo" onClick={this.filterMuseumsByName} />
           </div>
+              <CategoryWidget/>
+              </div>
 
-          </div>
+         
           <div className="columnLeft">
           <CreateCard museums = {this.state.newArray}/>
           </div>

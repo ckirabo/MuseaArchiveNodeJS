@@ -1,11 +1,17 @@
 /* For the search bar increasing focus so it increases.*/
+
+#headerMuseum{
+text-align: center;
+}
+
 ul {
 	list-style: none;
 }
 
 
+
 a:hover {
-   background-color: 66cc99;
+   background-color:#66cc99;
 }
 
 
@@ -15,6 +21,7 @@ div.columnLeft {
 	padding: 10px;
 	width:65%;
 	float: left;
+
 }
 
 div.columnRight {
@@ -25,7 +32,7 @@ div.columnRight {
 
 
 
-/*FOR THE SEARCH BAR & CATEGORY WIDGETS*/
+/*FOR THE SEARCH BAR*/
 div.pageContent {
 
 }
@@ -41,6 +48,7 @@ div.searchWidget {
 	-webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
 	-moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
 	box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+
 }
 
 input[type=text]:focus {
@@ -69,10 +77,13 @@ input[type=button]:focus {
 	background-color: #66cc99;
 }
 
+
+/*CATEGORY WIDGET */
+
 div.categoryWidget {
 	text-align: center;
 	width: 200px;
-	margin: 45px;
+	margin: 30px;
 	border: 3px solid #595959;
 	border-radius: 4px;
 	-webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
@@ -88,11 +99,10 @@ ul.categoryList {
 	padding: 5px;
 }
 
-
+/*CARDS CSS*/
 
 div.locationForCards{
 padding: 15px;
-
 }
 
 div.cards{
@@ -103,43 +113,39 @@ div.cards{
 }
 
 /* On screens that are less than 1300px wide, make the SIDE CHANGE VIEW */
-@media screen and (max-width:1300px) {
+@media screen and (max-width:900px) {
 
 	h1 {
 		text-align: center;
 	}
 	
-     div.columnRight{
-	  width:100%;
-	}
 
 	div.categoryWidget {
 		display: none;
 	}
 
+div.pageContent {
+padding: 10px;
+}
+
+
 
 }
 
-/* On screens that are less than 700px wide, make the SIDE CHANGE VIEW */
-@media screen and (max-width:700px) {
+/* NEEEED TO FIXs On screens that are less than 700px wide, make the SIDE CHANGE VIEW */
+@media screen and (max-width:600px) {
 
 	h1 {
 		text-align: center;
 	}
 
 	div.searchWidget {
-		width: 50%;
+		width: 60%;
 		height: auto;
 		position: relative;
 	}
 
 
-	div.searchWidget a {
-		float: left;
-		position: absolute;
-		top: 10px;
-		left: 15px;
-	}
 
 	/*Change the categories tab to a side nav button!!! that displays options in on overlay*/
 	div.categoryWidget {
