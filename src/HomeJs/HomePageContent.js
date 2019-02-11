@@ -8,7 +8,11 @@ class HomePageContent extends Component {
 constructor(){
 	super();
 
+	
+
 }
+
+
 
   render() {
     return (

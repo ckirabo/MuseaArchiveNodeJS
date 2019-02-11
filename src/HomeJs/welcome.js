@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-
+import '../Css/welcome.css';
 
 class Welcome extends Component {
 
@@ -14,7 +14,6 @@ this.state = {
 }
 
 
-
 render(){
 
 	return(
@@ -22,8 +21,11 @@ render(){
 		<div className="WelcomeCard">
 		<h1>{this.state.message}</h1>
 
+         <div id="paragraph">
 		<p>{this.state.info}</p>
+		 </div>
 
+		 <input type="button" value="Show Me More!" id="introButton"/>
 		</div>
 		</div>
 		);
