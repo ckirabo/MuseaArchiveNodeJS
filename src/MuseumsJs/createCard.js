@@ -18,6 +18,7 @@ let output = this.props.museums.map(
 			<li>{museums.address1}</li>
 			<li>{museums.postCode}</li>
 			<li>{museums.email}</li>
+			<li>{museums.type}</li>
 			</ul>
 			</div>
 			);
