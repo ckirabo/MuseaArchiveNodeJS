@@ -1,5 +1,10 @@
 /* For the search bar increasing focus so it increases.*/
 
+body{
+  padding: 15px;
+  
+}
+
 #headerMuseum{
 text-align: center;
 }
@@ -34,6 +39,8 @@ div.columnRight {
 
 /*FOR THE SEARCH BAR*/
 div.pageContent {
+	 margin: 0 auto -100px; /*Allow for footer height*/
+   vertical-align:bottom;
 
 }
 

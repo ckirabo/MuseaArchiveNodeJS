@@ -26,7 +26,7 @@ class Searchbar extends Component {
         this.setState({
 	     newArray : this.state.dummyData.filter(
          (museum) => museum.name.toLowerCase().includes(document.getElementById("searchBoxId").value.toLowerCase()
-		))
+	    	))
         });
 
 	    }
@@ -45,7 +45,7 @@ class Searchbar extends Component {
 	         <div className="searchWidget">
            <input type="text" placeholder="Search.." id="searchBoxId" onChange={this.filterMuseumsByName}/>
            <input type="button" value="Go!" id="searchGo" onClick={this.filterMuseumsByName} />
-          </div>
+              </div>
               <CategoryWidget/>
               </div>
 
