@@ -1,28 +1,61 @@
 import React, { Component } from 'react';
-import '../Css/MuseumsPage.css';
+
 
 class CreateCards extends Component {
-//hi
+
 
 render(){
-
 
 
 let output = this.props.museums.map(
 	(museums) => 
 	{
-		return(
+if((museums.link.indexOf("www") === 0) || ( !museums.link.indexOf("http") === 0) ){
+               let museumLink = museums.link;
+               museumLink = "http://" + museums.link;
+		
+      return(
 			<div key={museums.id} className="cards">
 			<h2>{museums.name}</h2>
 			<ul>
 			<li>{museums.address1}</li>
-			<li>{museums.postCode}</li>
-			<li>{museums.email}</li>
-			<li>{museums.type}</li>
+			<li>{museums.postcode}</li>
+			<li>{museums.admission}</li>
+			<li>{museums.contactNo}</li>
+			<li>{museums.contactEmail}</li>
+
+
+
+			<li><a href={museumLink}>{museumLink}</a></li>
 			</ul>
 			</div>
 			);
-	}
+  }
+
+  else{
+
+           return(
+			<div key={museums.id} className="cards">
+			<h2>{museums.name}</h2>
+			<ul>
+			<li>{museums.address1}</li>
+			<li>{museums.postcode}</li>
+			<li>{museums.admission}</li>
+			<li>{museums.contactNo}</li>
+			<li>{museums.contactEmail}</li>
+
+
+			<li><a href={museums.link}>{museums.link}</a></li>
+			</ul>
+			</div>
+			);
+
+		}
+
+	      
+
+		}
+	
 	);
 
 
