@@ -40,7 +40,7 @@ div.columnRight {
 /*FOR THE SEARCH BAR*/
 div.pageContent {
 	 margin: 0 auto -100px; /*Allow for footer height*/
-   vertical-align:bottom;
+     vertical-align:bottom;
 
 }
 
@@ -117,6 +117,7 @@ div.cards{
 	padding: 5px;
 	border-radius: 4px;
 	margin: 5px;
+	text-align: center;
 }
 
 /* On screens that are less than 1300px wide, make the SIDE CHANGE VIEW */

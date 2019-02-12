@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Searchbar from './searchBar.js';
 
 
+import Requests from '../requests.js';
 
 import '../Css/MuseumsPage.css';
 
@@ -22,10 +22,7 @@ class MuseusmsContent extends Component {
 
             <h1 id="headerMuseum">{this.state.header}</h1>
 
-            
-                  <Searchbar/>
-                  
-          
+                  <Requests/>
        
         </div>
 
