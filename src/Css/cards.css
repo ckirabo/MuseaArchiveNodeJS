@@ -1,0 +1,12 @@
+/*CARDS CSS*/
+
+div.locationForCards{
+padding: 15px;
+}
+
+div.cards{
+	border: 1px solid #595959;
+	padding: 5px;
+	border-radius: 4px;
+	margin: 5px;
+}
