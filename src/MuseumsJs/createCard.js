@@ -8,21 +8,21 @@ render(){
 
 
 let output = this.props.museums.map(
-	(museums) => 
+	(museum) => 
 	{
-if((museums.link.indexOf("www") === 0) || ( !museums.link.indexOf("http") === 0) ){
-               let museumLink = museums.link;
-               museumLink = "http://" + museums.link;
+if((museum.link.indexOf("www") === 0) || ( !museum.link.indexOf("http") === 0) ){
+               let museumLink = museum.link;
+               museumLink = "http://" + museum.link;
 		
       return(
-			<div key={museums.id} className="cards">
-			<h2>{museums.name}</h2>
+			<div key={museum.id} className="cards">
+			<h2>{museum.name}</h2>
 			<ul>
-			<li>{museums.address1}</li>
-			<li>{museums.postcode}</li>
-			<li>{museums.admission}</li>
-			<li>{museums.contactNo}</li>
-			<li>{museums.contactEmail}</li>
+			<li>{museum.address1}</li>
+			<li>{museum.postcode}</li>
+			<li>{museum.admission}</li>
+			<li>{museum.contactNo}</li>
+			<li>{museum.contactEmail}</li>
 
 
 
@@ -35,17 +35,17 @@ if((museums.link.indexOf("www") === 0) || ( !museums.link.indexOf("http") === 0)
   else{
 
            return(
-			<div key={museums.id} className="cards">
-			<h2>{museums.name}</h2>
+			<div key={museum.id} className="cards">
+			<h2>{museum.name}</h2>
 			<ul>
-			<li>{museums.address1}</li>
-			<li>{museums.postcode}</li>
-			<li>{museums.admission}</li>
-			<li>{museums.contactNo}</li>
-			<li>{museums.contactEmail}</li>
+			<li>{museum.address1}</li>
+			<li>{museum.postcode}</li>
+			<li>{museum.admission}</li>
+			<li>{museum.contactNo}</li>
+			<li>{museum.contactEmail}</li>
 
 
-			<li><a href={museums.link}>{museums.link}</a></li>
+			<li><a href={museum.link}>{museum.link}</a></li>
 			</ul>
 			</div>
 			);
