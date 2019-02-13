@@ -49,7 +49,7 @@ componentDidMount(){
 
     fitlerHandler() {
 
-    	if(document.getElementById("searchBoxId").value === ""){
+    	 if(document.getElementById("searchBoxId").value === ""){
 
 
           this.setState({
@@ -58,7 +58,7 @@ componentDidMount(){
 
          });
 
-    	}
+     	}
 
           else{   
 

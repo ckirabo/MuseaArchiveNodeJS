@@ -3,6 +3,9 @@ import CreateCard from '../MuseumsJs/createCard.js';
 import '../Css/welcome.css';
 import '../Css/cards.css';
 
+import axios from 'axios';
+
+
 class BottomContent extends Component {
 
 constructor(){
@@ -10,9 +13,7 @@ super();
 
 this.state = {
 
-	rawData : [ {id : 1 , name : "Art Museum", postcode : "SBW"},
-	            {id : 2, name : "Science Museum", postcode : "SBF"},
-	            {id : 3, name : "Clown Museum", postcode: "ASA"}],
+	rawData : [],
 
 	display : [],
 	clicked : true
@@ -33,6 +34,30 @@ this.random =  () => {
  
 
 }
+
+
+
+
+componentDidMount(){
+        //put into data
+        axios.get('http://localhost:9090/Museums/AllMuseums')
+        .then(json => json.data.map(data => (
+        {
+        	id : data.museum_id , 
+        	name : data.name, 
+        	address1 : data.address_Line_1 ,
+	        postcode : data.postCode, 
+	        admission : data.admission,
+	        contactNo : data.contact_Number,
+	        contactEmail : data.contact_Email,
+	        link : data.website
+        })))
+        .then(newData => this.setState({rawData:newData , filtered:newData }))
+        .catch(error => alert(error))
+
+
+        
+      }
 
 
 
