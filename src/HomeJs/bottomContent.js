@@ -16,7 +16,10 @@ this.state = {
 	rawData : [],
 
 	display : [],
-	clicked : true
+	clicked : true,
+
+	paragraph : "So you've probably noticed this button havent you why not give it a click.",
+	information : "This website is brought to you to make it easier to find what musuems you can visit on your next day off. If you click the links you will be transported to the museums website. I hope you enjoy your visit!"
 }
 
 this.random =  () => {
@@ -29,8 +32,9 @@ this.random =  () => {
        display : [this.state.rawData[number]]
   });
 
-
  }
+
+
  
 
 }
@@ -39,14 +43,14 @@ this.random =  () => {
 
 
 componentDidMount(){
-        //put into data
-        axios.get('http://localhost:9090/Museums/AllMuseums')
+  
+        axios.get('http://192.168.1.104:9090/Museums/AllMuseums')
         .then(json => json.data.map(data => (
         {
         	id : data.museum_id , 
         	name : data.name, 
         	address1 : data.address_Line_1 ,
-	        postcode : data.postCode, 
+	        postcode : data.postcode, 
 	        admission : data.admission,
 	        contactNo : data.contact_Number,
 	        contactEmail : data.contact_Email,
@@ -67,12 +71,13 @@ console.log(this.state.rawData);
 
 		<div className="bottomContent">
 		<div className="left">
-		<p>"Hi this is random text about this website. Press the button for a ranom museum information yay"</p>
+		<p>{this.state.paragraph}</p>
+		<p>{this.state.information}</p>
 		<input type="button" value="Totaly Random" id="random" onClick={this.random}/>
 		</div>
-
+        
 		<div className="right">
-		<CreateCard museums ={this.state.display} />
+		<CreateCard museums = {this.state.display} />
 		</div>
 		</div>
 

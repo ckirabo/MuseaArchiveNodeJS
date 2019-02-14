@@ -14,8 +14,7 @@ class Request extends Component {
         this.state = {
             rawData:[],
             filtered:[]
-         
-          
+        
         }
 
         this.fitlerHandler = this.fitlerHandler.bind(this)
@@ -25,14 +24,14 @@ class Request extends Component {
 
  
 componentDidMount(){
-        //put into data
-        axios.get('http://localhost:9090/Museums/AllMuseums')
+  
+        axios.get('http://192.168.1.104:9090/Museums/AllMuseums')
         .then(json => json.data.map(data => (
         {
         	id : data.museum_id , 
         	name : data.name, 
         	address1 : data.address_Line_1 ,
-	        postcode : data.postCode, 
+	        postcode : data.postcode, 
 	        admission : data.admission,
 	        contactNo : data.contact_Number,
 	        contactEmail : data.contact_Email,
@@ -71,7 +70,7 @@ componentDidMount(){
 
           }
 
-      //this.state.filtered.map((item => console.log(item)));
+  
       }
 
 

@@ -8,8 +8,8 @@ constructor(){
 super();
 
 this.state = {
-	message : "Welcome!",
-	info : "Welcome musea Archives. Here you can view all the different museums Manchester has to offer."
+	message : "Musea Archives!",
+	info : "Welcome Musea Archives. Here you can view all the different museums Manchester has to offer."
 }
 }
 
@@ -22,10 +22,9 @@ render(){
 		<h1>{this.state.message}</h1>
 
          <div id="paragraph">
-		<p>{this.state.info}</p>
+		 <p>{this.state.info}</p>
 		 </div>
 
-		 <input type="button" value="Show Me More!" id="introButton"/>
 		</div>
 		</div>
 		);
